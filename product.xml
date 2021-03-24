@@ -73,7 +73,7 @@
         <record model="babi.expression" id="product_category">
             <field name="ttype">many2one</field>
             <field name="model" search="[('model','=','product.product')]"/>
-            <field name="expression">o.category and o.category.id</field>
+            <field name="expression">o.account_category and o.account_category.id</field>
             <field name="name">Category</field>
             <field name="related_model" search="[('model','=','product.category')]"/>
         </record>
