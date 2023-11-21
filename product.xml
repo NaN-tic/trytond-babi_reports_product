@@ -92,13 +92,13 @@
         <record model="babi.expression" id="product_unit_profit">
             <field name="ttype">float</field>
             <field name="model" search="[('model','=','product.product')]"/>
-            <field name="expression">o.list_price - o.cost_price</field>
+            <field name="expression">(o.list_price or 0) - (o.cost_price or 0)</field>
             <field name="name">Unit Profit</field>
         </record>
         <record model="babi.expression" id="product_unit_margin">
             <field name="ttype">float</field>
             <field name="model" search="[('model','=','product.product')]"/>
-            <field name="expression">100 * (o.list_price - o.cost_price) / o.cost_price</field>
+            <field name="expression">o.cost_price is not None and (100 * ((o.list_price or 0) - (o.cost_price or 0)) / o.cost_price) or 0</field>
             <field name="name">Unit Margin</field>
         </record>
         <record model="babi.expression" id="product_type">
