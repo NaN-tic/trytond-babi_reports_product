@@ -32,7 +32,7 @@ msgstr "Nombre registro"
 
 msgctxt "model:babi.expression,name:product_self"
 msgid "Product"
-msgstr "Productos"
+msgstr "Producto"
 
 msgctxt "model:babi.expression,name:product_type"
 msgid "Type"
