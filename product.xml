@@ -6,32 +6,32 @@
         <!-- Filters -->
         <record model="babi.filter" id="stockable_products">
             <field name="name">Goods</field>
-            <field name="model" search="[('model', '=', 'product.product')]"/>
+            <field name="model" search="[('name', '=', 'product.product')]"/>
             <field name="domain">[('type', '=', 'goods')]</field>
         </record>
         <record model="babi.filter" id="assets_products">
             <field name="name">Assets</field>
-            <field name="model" search="[('model', '=', 'product.product')]"/>
+            <field name="model" search="[('name', '=', 'product.product')]"/>
             <field name="domain">[('type', '=', 'assets')]</field>
         </record>
         <record model="babi.filter" id="service_products">
             <field name="name">Services</field>
-            <field name="model" search="[('model', '=', 'product.product')]"/>
+            <field name="model" search="[('name', '=', 'product.product')]"/>
             <field name="domain">[('type', '=', 'service')]</field>
         </record>
         <record model="babi.filter" id="consumable_products">
             <field name="name">Consumables</field>
-            <field name="model" search="[('model', '=', 'product.product')]"/>
+            <field name="model" search="[('name', '=', 'product.product')]"/>
             <field name="domain">[('consumable', '=', True)]</field>
         </record>
         <record model="babi.filter" id="sellable_products">
             <field name="name">Salable</field>
-            <field name="model" search="[('model', '=', 'product.product')]"/>
+            <field name="model" search="[('name', '=', 'product.product')]"/>
             <field name="domain">[('salable', '=', True)]</field>
         </record>
         <record model="babi.filter" id="purchasable_products">
             <field name="name">Purchasable</field>
-            <field name="model" search="[('model', '=', 'product.product')]"/>
+            <field name="model" search="[('name', '=', 'product.product')]"/>
             <field name="domain">[('purchasable', '=', True)]</field>
         </record>
 
@@ -41,69 +41,69 @@
         <!-- product.product -->
         <record model="babi.expression" id="product_self">
             <field name="ttype">many2one</field>
-            <field name="model" search="[('model','=','product.product')]"/>
+            <field name="model" search="[('name','=','product.product')]"/>
             <field name="expression">o.id</field>
             <field name="name">Product</field>
-            <field name="related_model" search="[('model','=','product.product')]"/>
+            <field name="related_model" search="[('name','=','product.product')]"/>
         </record>
         <record model="babi.expression" id="product">
             <field name="ttype">integer</field>
-            <field name="model" search="[('model','=','product.product')]"/>
+            <field name="model" search="[('name','=','product.product')]"/>
             <field name="expression">o.id</field>
             <field name="name">ID</field>
         </record>
         <record model="babi.expression" id="product_code">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','product.product')]"/>
+            <field name="model" search="[('name','=','product.product')]"/>
             <field name="expression">o.code</field>
             <field name="name">Code</field>
         </record>
         <record model="babi.expression" id="product_rec_name">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','product.product')]"/>
+            <field name="model" search="[('name','=','product.product')]"/>
             <field name="expression">o.rec_name</field>
             <field name="name">Record Name</field>
         </record>
         <record model="babi.expression" id="product_name">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','product.product')]"/>
+            <field name="model" search="[('name','=','product.product')]"/>
             <field name="expression">o.name</field>
             <field name="name">Name</field>
         </record>
         <record model="babi.expression" id="product_category">
             <field name="ttype">many2one</field>
-            <field name="model" search="[('model','=','product.product')]"/>
+            <field name="model" search="[('name','=','product.product')]"/>
             <field name="expression">o.account_category and o.account_category.id</field>
             <field name="name">Category</field>
-            <field name="related_model" search="[('model','=','product.category')]"/>
+            <field name="related_model" search="[('name','=','product.category')]"/>
         </record>
         <record model="babi.expression" id="product_list_price">
             <field name="ttype">float</field>
-            <field name="model" search="[('model','=','product.product')]"/>
+            <field name="model" search="[('name','=','product.product')]"/>
             <field name="expression">o.list_price</field>
             <field name="name">List Price</field>
         </record>
         <record model="babi.expression" id="product_cost_price">
             <field name="ttype">float</field>
-            <field name="model" search="[('model','=','product.product')]"/>
+            <field name="model" search="[('name','=','product.product')]"/>
             <field name="expression">o.cost_price</field>
             <field name="name">Cost Price</field>
         </record>
         <record model="babi.expression" id="product_unit_profit">
             <field name="ttype">float</field>
-            <field name="model" search="[('model','=','product.product')]"/>
+            <field name="model" search="[('name','=','product.product')]"/>
             <field name="expression">(o.list_price or 0) - (o.cost_price or 0)</field>
             <field name="name">Unit Profit</field>
         </record>
         <record model="babi.expression" id="product_unit_margin">
             <field name="ttype">float</field>
-            <field name="model" search="[('model','=','product.product')]"/>
+            <field name="model" search="[('name','=','product.product')]"/>
             <field name="expression">100 * (o.list_price - o.cost_price) / o.cost_price if o.list_price and o.cost_price else 0</field>
             <field name="name">Unit Margin</field>
         </record>
         <record model="babi.expression" id="product_type">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','product.product')]"/>
+            <field name="model" search="[('name','=','product.product')]"/>
             <field name="expression">o.type</field>
             <field name="name">Type</field>
         </record>
