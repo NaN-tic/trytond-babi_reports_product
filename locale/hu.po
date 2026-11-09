@@ -1,0 +1,76 @@
+#
+msgid ""
+msgstr ""
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "model:babi.expression,name:product"
+msgid "ID"
+msgstr "Azonosító"
+
+msgctxt "model:babi.expression,name:product_category"
+msgid "Category"
+msgstr "Kategória"
+
+msgctxt "model:babi.expression,name:product_code"
+msgid "Code"
+msgstr "Kód"
+
+msgctxt "model:babi.expression,name:product_cost_price"
+msgid "Cost Price"
+msgstr "Költségár"
+
+msgctxt "model:babi.expression,name:product_list_price"
+msgid "List Price"
+msgstr "Listaár"
+
+msgctxt "model:babi.expression,name:product_name"
+msgid "Name"
+msgstr "Név"
+
+msgctxt "model:babi.expression,name:product_rec_name"
+msgid "Record Name"
+msgstr "Rekord neve"
+
+msgctxt "model:babi.expression,name:product_self"
+msgid "Product"
+msgstr "Termék"
+
+msgctxt "model:babi.expression,name:product_type"
+msgid "Type"
+msgstr "Típus"
+
+msgctxt "model:babi.expression,name:product_unit_margin"
+msgid "Unit Margin"
+msgstr "Egységnyi árrés"
+
+msgctxt "model:babi.expression,name:product_unit_profit"
+msgid "Unit Profit"
+msgstr "Egységnyi nyereség"
+
+msgctxt "model:babi.filter,name:assets_products"
+msgid "Assets"
+msgstr "Eszközök"
+
+msgctxt "model:babi.filter,name:consumable_products"
+msgid "Consumables"
+msgstr "Fogyóeszközök"
+
+msgctxt "model:babi.filter,name:purchasable_products"
+msgid "Purchasable"
+msgstr "Beszerezhető"
+
+msgctxt "model:babi.filter,name:sellable_products"
+msgid "Salable"
+msgstr "Eladható"
+
+msgctxt "model:babi.filter,name:service_products"
+msgid "Services"
+msgstr "Szolgáltatások"
+
+msgctxt "model:babi.filter,name:stockable_products"
+msgid "Goods"
+msgstr "Áru"
